@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+NextJs JWT Auth Boilerplate
 
-## Getting Started
+This is a Next.js boilerplate featuring JWT-based authentication with HTTP-only cookies. It is designed to be a simple, ready-to-use starting point for building secure Next.js apps.
 
-First, run the development server:
+Features
 
-```bash
+- Next.js + React
+- JWT authentication
+- HTTP-only cookie-based session management
+- Clean folder structure: app, components, services, lib
+- Ready-to-use authentication API routes
+
+Getting Started
+
+1. Clone the repo
+
+git clone https://github.com/your-username/Authnyx.git
+cd Authnyx
+
+2. Install dependencies
+
+npm install
+# or
+yarn
+# or
+pnpm install
+
+3. Setup environment variables
+
+Create a .env.local file in the project root:
+
+NEXT_PUBLIC_API_URL=http://localhost:3000/api
+JWT_SECRET=your_super_secret_key
+COOKIE_NAME=auth_token
+
+4. Run the development server
+
 npm run dev
 # or
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 in your browser
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Folder Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+app           - Next.js pages and API routes
+components    - Reusable React components
+services      - API helpers and auth services
+lib           - Config and utility functions
+public        - Static assets
 
-## Learn More
+Usage
 
-To learn more about Next.js, take a look at the following resources:
+- Sign up and login via API routes using JWT and cookies
+- Protect pages by checking cookies on the server or client
+- Extend easily for roles, permissions, or other auth strategies
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Contributing
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- You can fork and use it as a starting point
+- Pull requests for improvements are welcome
 
-## Deploy on Vercel
+License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT License
